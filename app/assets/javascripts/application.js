@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require npm-dependencies
+//= require angular-devise
 //= require jquery_ujs
 //= require_tree .

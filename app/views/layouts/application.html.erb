@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html<%= content_for(:angular) %>>
   <head>
     <title>AssignmentFullStackBulletinBoard</title>
     <%= csrf_meta_tags %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
