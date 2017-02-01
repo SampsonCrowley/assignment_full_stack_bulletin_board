@@ -4,8 +4,8 @@ class CreateComments < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :body
       t.string :author
-      t.integer :post_id
-      t.user_id :integer
+      t.references :post
+      t.references :user
 
       t.timestamps
     end
