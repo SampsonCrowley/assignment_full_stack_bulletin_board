@@ -38,8 +38,22 @@ pinboard.config([
   function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('index', {
-      
+    $stateProvider.state('posts', {
+      url:'/',
+      abstract: true,
+      views: {
+        '':{
+          template: '<ui-view></ui-view>'
+        }
+      }
+    }).state('posts.index', {
+      url:'',
+      views: {
+        '':{
+          templateUrl: 'templates/posts/index.html',
+          controller: 'PostIndexController'
+        }
+      }
     })
   }
 ])
